@@ -3,6 +3,8 @@ const dropZone = document.querySelector(".drop-zone");
 let testAudio = document.querySelector(".test-audio");
 let play = document.querySelector(".play")
 let stop = document.querySelector(".stop")
+let button = document.querySelector("button")
+button.disabled = true;
 
 play.onclick = () => {
   testAudio.play()
@@ -39,7 +41,8 @@ dropZone.ondrop = (ev) => {
   request.onload = () => {
    
     setTimeout(() => {
-      dropZone.innerHTML = "MUSIC HAS BEEN UPLOADED"
+      dropZone.textContent = "MUSIC HAS BEEN UPLOADED"
+        button.disabled = false;
     }, 1000)
     setTimeout(() => {
       dropZone.innerHTML = ""
