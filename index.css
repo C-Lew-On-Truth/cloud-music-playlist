@@ -1,0 +1,33 @@
+.audio-player {
+  margin: 1% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 275px;
+  width: 300px;
+}
+
+.audio-player h1 {
+  font-size: 14px;
+  margin: 0;
+  font-family: impact;
+}
+
+.drop-zone {
+  width: 150px;
+  height: 150px;
+  border: dashed;
+}
+
+.stop {
+  display:none;
+}
+
+button {
+  cursor: pointer;
+  width: 120px;
+  height: 30px;
+  border: 0;
+  font-family: impact;
+}
