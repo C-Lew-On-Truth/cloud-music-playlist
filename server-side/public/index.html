@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>PRACCY</title>
+</head>
+<html>
+    <body>
+
+        <form>
+
+            <input type="text" id="input"/>
+            <button id="get">GET</button>
+            <button id="post">POST</button>
+        </form>
+<script>
+    const getBtn = document.getElementById("get")
+    const postBtn = document.getElementById("post")
+    const input = document.getElementById("input")
+
+  
+    const baseURL = "http://localhost:3000/info"
+
+    getBtn.addEventListener("click", getInfo)
+
+    async function getInfo(e) {
+        e.preventDefault()
+        const res = await fetch(baseURL,
+        {
+            method:"GET"
+        })
+        console.log(res);
+        const data = await res.json();
+        input.value = data.info
+    }
+
+
+    async function postInfo() {
+        
+    }
+</script>
+    </body>
+</html>
